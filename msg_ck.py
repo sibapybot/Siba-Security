@@ -96,13 +96,6 @@ class TextAnalysis:
 #"テスト","ではない","テスト","実験","まあー","適当"
 #
     
-if __name__ == "__main__":
-    text_list = ["テスト","ではない","テスト","実験","まあー","適当"]
 
-    textdata = TextAnalysis(text_list)
-
-    point_list = textdata.sentence_w(target_text="これもてすとだあ",)
-
-    #print(point_list)
-
+   
         
