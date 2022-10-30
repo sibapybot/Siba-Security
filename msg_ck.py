@@ -77,19 +77,19 @@ class TextAnalysis:
             q_all = np.percentile(result_point, [i*10 for i in range(len(self.text_list))])
             print(self.textlen_list)
             print(list(q_all))
-            #if len(self.text_list) >= 5 and q25 >= 1:
-            #    
-            #    if 0 <= q25-q50 < 10:
-            #        point += 60
-            #    elif 0 <= q25-q50 < 20:
-            #        point += 40
-            #    
-            #    if 0 <= q25-q75 < 10:
-            #        point += 120
-            #    elif 0 <= q25-q75 < 20:
-            #        point += 60
+            if len(self.text_list) >= 5 and q25 >= 1:
+                
+                if 0 <= q25-q50 < 10:
+                    point += 60
+                elif 0 <= q25-q50 < 20:
+                    point += 40
+                
+                if 0 <= q25-q75 < 10:
+                    point += 120
+                elif 0 <= q25-q75 < 20:
+                    point += 60
        
-        #return point
+        return point
 
 
 
