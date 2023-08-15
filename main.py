@@ -27,7 +27,7 @@ class SibaBot(commands.Bot):
             intents=discord.Intents.all(),
             application_id=settings.DISCORD_APP_ID
         )
-        self.version = "0.1.2β"
+        self.version = "0.2.0β"
         self.admin_user: list[int] = settings.ADMIN_USER  # type: ignore
 
     async def setup_hook(self) -> None:
