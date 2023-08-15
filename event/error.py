@@ -1,5 +1,7 @@
 import discord
 from discord.ext import commands
+from Logger import Logger
+logger = Logger()
 
 
 class Error(commands.Cog):
@@ -17,4 +19,4 @@ async def setup(bot: commands.Bot) -> None:
         Error(bot),
         guilds=[discord.Object(id=964656515686465608)]
     )
-    print("errorイベント")
+    logger.info("Error event is ready!")

@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 import settings
+from Logger import Logger
+logger = Logger()
 
 
 class Guildjoin(commands.Cog):
@@ -26,4 +28,4 @@ async def setup(bot: commands.Bot) -> None:
         Guildjoin(bot),
         guilds=[discord.Object(id=int(settings.GUILD_ID))]  # type: ignore
     )
-    print("ギルド加入イベント")
+    logger.info("Guild join event is ready!")

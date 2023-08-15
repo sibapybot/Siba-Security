@@ -1,6 +1,8 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
+from Logger import Logger
+logger = Logger()
 
 
 class User_Command(commands.Cog):
@@ -36,4 +38,4 @@ async def setup(bot: commands.Bot) -> None:
         User_Command(bot),
         guilds=[discord.Object(id=964656515686465608)]
     )
-    print("テストコマンド準備OK")
+    logger.info("Test command is ready!")
