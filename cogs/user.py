@@ -2,6 +2,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 from Logger import Logger
+import settings
 logger = Logger()
 
 
@@ -36,6 +37,6 @@ class User_Command(commands.Cog):
 async def setup(bot: commands.Bot) -> None:
     await bot.add_cog(
         User_Command(bot),
-        guilds=[discord.Object(id=964656515686465608)]
+        guilds=[discord.Object(id=settings.GUILD_ID)]
     )
     logger.info("Test command is ready!")

@@ -6,6 +6,7 @@ import msg_ck
 import datetime
 import time
 from Logger import Logger
+import settings
 logger = Logger()
 
 
@@ -238,6 +239,6 @@ class MessageV20(commands.Cog):
 async def setup(bot: commands.Bot) -> None:
     await bot.add_cog(
         MessageV20(bot),
-        guilds=[discord.Object(id=964656515686465608)]
+        guilds=[discord.Object(id=settings.GUILD_ID)]
     )
     logger.info("Message checker V20 is ready!")
